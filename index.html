@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css" />
+
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="img_nature_wide.jpg" style="width:100%; height:96vh; z-index: 40;">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img_snow_wide.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img_mountains_wide.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center" class="dots">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<!-- Who We Are -->
+<div>
+    <div>
+        <div>
+            <p class="our">Who We Are</p>
+            <img src="line.png" alt="Line" class="line"/>
+        </div>
+        <div>
+            <img src="eavo.png" alt="Evao" />
+        </div>
+    </div>
+</div>
+
+
+<!-- Out Programs -->
+<div class="program">
+    <p class="our">Our Programs</p>
+    <img src="line.png" alt="Line separate" />
+   <div class="clo">
+    <div class="cleans">
+        <div class="cleano">
+            <img src="clean.png" alt="clean Water Initiatives" class="clean"/>
+            <p class="clea">Clean Water <br/> Initiatives</p>
+        </div>
+        <div class="cleano">
+            <img src="edu.png" alt="Educational Support" class="clean"/>
+            <p class="clea">Educational <br/>Support</p>
+        </div>
+        <div class="cleano">
+            <img src="health.png" alt="Healthcare Projects" class="clean"/>
+            <p class="clea">Healthcare<br/> Projects</p>
+        </div>
+        <div class="cleano">
+            <img src="emp.png" alt="Empowering Sustainability" class="clean"/>
+            <p class="clea">Empowering <br/>Sustainability</p>
+        </div>
+    </div>
+    <div class="cleans cla">
+        <div class="cleano">
+            <img src="sup.png" alt="Support for Spritual Development" class="clean"/>
+            <p class="clea">Support for Spritual <br/> Development</p>
+        </div>
+        <div class="cleano">
+            <img src="com.png" alt="Community Needs Assessment" class="clean"/>
+            <p class="clea">Community Needs<br/> Assessment</p>
+        </div>
+        <div class="cleano">
+            <img src="custo.png" alt="Customized Donor Support" class="clean"/>
+            <p class="clea">Clean Water <br/> Initiatives</p>
+        </div>
+    </div>
+   </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
