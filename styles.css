@@ -14,6 +14,9 @@ img {vertical-align: middle;}
   position: relative;
   margin: auto;
 }
+body{
+  overflow-x: hidden;
+}
 
 /* Next & previous buttons */
 .prev, .next {
@@ -66,6 +69,9 @@ img {vertical-align: middle;}
 }
 .font16{
   font-size: 16px;
+}
+.font12{
+  font-size: 12px;
 }
 /* Number text (1/3 etc) */
 .numbertext {
@@ -121,6 +127,7 @@ img {vertical-align: middle;}
     margin-top: 20px;
 }
 .eavo{
+    margin-top: 40px;
     height: 471px;
     width: 517px;
 }
@@ -165,9 +172,10 @@ img {vertical-align: middle;}
 }
 .cleans{
     
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);    /* display: flex; */
-    /* flex-direction: row; */
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);    */
+     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-left: 50px;
@@ -271,6 +279,26 @@ img {vertical-align: middle;}
         font-weight: bold;
         font-size: 20px;
     }
+    .eavo{
+      padding-left: 2px;
+      padding-right: 2px;
+    }
+    .eavo{
+      height: 471px;
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .line{
+    width: fit-content;
+    height: 40px;
+  }
+  .who2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   }
   
   /* Small devices (tablets) */
@@ -296,6 +324,11 @@ img {vertical-align: middle;}
         grid-column: span 2;
     
   }
+  .who2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
   /* Medium devices (laptops/desktops) */
   @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -312,8 +345,13 @@ img {vertical-align: middle;}
         align-items: start;
     }
     .who1{
-        grid-column: span 2;
+        grid-column: span 3;
     
+  }
+  .who2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
 }
@@ -326,5 +364,10 @@ img {vertical-align: middle;}
         display: grid;
         grid-template-columns: 4;
     } */
+    .who2{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
   
