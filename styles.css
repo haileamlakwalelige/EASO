@@ -21,7 +21,27 @@ body{
 .cri{
   font-family: 'Crimson Text', serif;
 }
-
+.font18{
+  font-size:35px;
+  font-weight: 400px;
+  color: #00353B;
+}
+.dif{
+  max-width: 280px;
+  min-height: 366px;
+}
+.difa{
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.whis{
+  grid-area: span 2;
+}
+.whi{
+  grid-area: span 1;
+}
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
