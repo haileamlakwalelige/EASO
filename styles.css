@@ -443,6 +443,47 @@ body{
 .font36{
   font-size: 36px;
 }
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+.gra{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+.gra img{
+  max-width: 386px;
+  max-height: 378px;
+  margin: 5% 5%;
+  padding: 5% 5%;
+  gap: 50px;
+}
+.full{
+  width: 100%;
+  grid-column: span 3;
+
+}
 /* Extra small devices (phones) */
 @media only screen and (max-width: 575px) {
     /* Your styles for very small devices here */
