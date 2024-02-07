@@ -32,10 +32,10 @@ body {
 .cri {
   font-family: "Crimson Text", serif;
 }
-.gri{
-  color:#9AC760;
+.gri {
+  color: #9ac760;
 }
-.ball{
+.ball {
   font-weight: bold;
   font-size: 20px;
 }
@@ -232,6 +232,10 @@ body {
   padding-bottom: 50px;
   justify-content: center;
   align-items: start;
+}
+.my5 {
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 .who1 {
   grid-column: span 4;
@@ -748,15 +752,14 @@ body {
 .rounded {
   background-color: green;
   border-radius: 20%;
-  
 }
-.mar{
+.mar {
   margin: 1% 10%;
 }
-.pad{
+.pad {
   padding: 2px 2px;
 }
 
-.fla{
+.fla {
   display: flex;
 }
