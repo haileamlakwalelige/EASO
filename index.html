@@ -10,10 +10,8 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="faq.css" />
   </head>
   <body>
-
 
     <!-- Who We Are -->
     <div class="what">
@@ -239,8 +237,8 @@
       <div class="grids">
         <div class="blog1 flexc">
           <img src="/images/blog1.png" />
-          <h4 class="afri tag">African Connection</h4>
-          <h5 class="cri mt5 my5">
+          <h4 class="afri">African Connection</h4>
+          <h5 class="cri mt5">
             This blog highlights the work of East African Village Outreach
             (EAVO) in Ethiopia and Kenya. It mentions the challenges faced due
             to political unrest and the efforts to provide aid and spiritual
@@ -249,7 +247,7 @@
             surgery. The surgery was successful, and Tresi&apos;s recovery is a
             testament to EAVO&apos;s impact.
           </h5>
-          <div class="cen between my5">
+          <div class="cen between">
             <div class="flex ray cen">
               <i class="fa-regular fa-calendar"></i>
               <p class="inter font14 mt2">September 19, 2016</p>
@@ -261,8 +259,8 @@
         </div>
         <div class="blog1 flexc">
           <img src="/images/blog2.png" />
-          <h4 class="afri tag">African Connection</h4>
-          <h5 class="cri mt5 my5">
+          <h4 class="afri">African Connection</h4>
+          <h5 class="cri mt5">
             This blog highlights the work of East African Village Outreach
             (EAVO) in Ethiopia and Kenya. It mentions the challenges faced due
             to political unrest and the efforts to provide aid and spiritual
@@ -271,7 +269,7 @@
             surgery. The surgery was successful, and Tresi&apos;s recovery is a
             testament to EAVO&apos;s impact.
           </h5>
-          <div class="cen between my5">
+          <div class="cen between">
             <div class="flex ray">
               <i class="fa-regular fa-calendar"></i>
               <p class="inter font14 mt2">September 19, 2016</p>
@@ -297,59 +295,8 @@
       </div>
     </div>
 
-    <!-- Accordion -->
-    <div>
-      <div class="accordion">
-        <div class="image-box">
-          <img src="images/mainImg.png" alt="Accordion Image">
-        </div>
-        <div class="accordion-text">
-          <div class="title">FAQ</div>
-        <ul class="faq-text">
-          <li>
-            <div class="question-arrow">
-              <span class="question">What do you mean by HTML & CSS?</span>
-              <i class="bx bxs-chevron-down arrow"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum, doloribus.</p>
-            <span class="line"></span>
-          </li>
-          <li>
-            <div class="question-arrow">
-              <span class="question">What do you mean by JavaScript?</span>
-              <i class="bx bxs-chevron-down arrow"></i>
-            </div>
-            <p>JavaScript is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive</p>
-            <span class="line"></span>
-          </li>
-          <li>
-            <div class="question-arrow">
-              <span class="question">From where you learned HTML & CSS?</span>
-              <i class="bx bxs-chevron-down arrow"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, necessitatibus.</p>
-            <span class="line"></span>
-          </li>
-          <li>
-            <div class="question-arrow">
-              <span class="question">Which code editor do you use?</span>
-              <i class="bx bxs-chevron-down arrow"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, labore.</p>
-            <span class="line"></span>
-          </li>
-          <li>
-            <div class="question-arrow">
-              <span class="question">Software you use for video editing?</span>
-              <i class="bx bxs-chevron-down arrow"></i>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, repudiandae!</p>
-            <span class="line"></span>
-          </li>
-        </ul>
-        </div>
-      </div>
-    </div>
+  
+      
 
 
     <script>
@@ -399,18 +346,19 @@
         });
       }
 
-      let li = document.querySelectorAll(".faq-text li");
-    for (var i = 0; i < li.length; i++) {
-      li[i].addEventListener("click", (e)=>{
-        let clickedLi;
-        if(e.target.classList.contains("question-arrow")){
-          clickedLi = e.target.parentElement;
-        }else{
-          clickedLi = e.target.parentElement.parentElement;
-        }
-       clickedLi.classList.toggle("showAnswer");
-      });
-    }
+      function toggleAnswer(id) {
+        var answer = document.getElementById("answer" + id);
+        var allAnswers = document.querySelectorAll(".answer");
+
+        // Hide all answers
+        allAnswers.forEach(function (ans) {
+          ans.style.display = "none";
+        });
+
+        // Show the clicked answer
+        answer.style.display =
+          answer.style.display === "none" ? "block" : "none";
+      }
     </script>
   </body>
 </html>
