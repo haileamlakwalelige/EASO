@@ -10,6 +10,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="faq.css" />
   </head>
   <body>
     <div class="slideshow-container">
@@ -325,26 +326,76 @@
     </div>
 
     <!-- Accordion -->
-    <div class="gra">
-      <div>
-        <img src="/images/faq.png" />
+    <div>
+      <div class="accordion">
+        <div class="image-box">
+          <img src="images/faq.png" alt="Accordion Image" />
+        </div>
+        <div class="accordion-text">
+          <div class="title">FAQ</div>
+          <ul class="faq-text">
+            <li>
+              <div class="question-arrow">
+                <span class="question">What do you mean by HTML & CSS?</span>
+                <i class="bx bxs-chevron-down arrow"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Nostrum, doloribus.
+              </p>
+              <span class="line"></span>
+            </li>
+            <li>
+              <div class="question-arrow">
+                <span class="question">What do you mean by JavaScript?</span>
+                <i class="bx bxs-chevron-down arrow"></i>
+              </div>
+              <p>
+                JavaScript is a text-based programming language used both on the
+                client-side and server-side that allows you to make web pages
+                interactive
+              </p>
+              <span class="line"></span>
+            </li>
+            <li>
+              <div class="question-arrow">
+                <span class="question">From where you learned HTML & CSS?</span>
+                <i class="bx bxs-chevron-down arrow"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non,
+                necessitatibus.
+              </p>
+              <span class="line"></span>
+            </li>
+            <li>
+              <div class="question-arrow">
+                <span class="question">Which code editor do you use?</span>
+                <i class="bx bxs-chevron-down arrow"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum,
+                labore.
+              </p>
+              <span class="line"></span>
+            </li>
+            <li>
+              <div class="question-arrow">
+                <span class="question"
+                  >Software you use for video editing?</span
+                >
+                <i class="bx bxs-chevron-down arrow"></i>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe,
+                repudiandae!
+              </p>
+              <span class="line"></span>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class='full mar'>
-        <div class="faq in full">
-          <div class="question rounded pad fla" onclick="toggleAnswer(1)">Q: What is Lorem Ipsum? <p>+</p></div>
-          <div class="answer" id="answer1">A: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
-      </div>
-      <div class="faq in full">
-          <div class="question" onclick="toggleAnswer(2)">Q: Why do we use it?</div>
-          <div class="answer" id="answer2">A: It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
-      </div>
-      <div class="faq in full">
-          <div class="question" onclick="toggleAnswer(3)">Q: Where does it come from?</div>
-          <div class="answer sm" id="answer3">A: Contrary to popular belief, Lorem Ipsum is not simply random text.</div>
-      </div>
-      </div>
-      
-
+    </div>
 
     <script>
       let slideIndex = 1;
@@ -393,18 +444,17 @@
         });
       }
 
-      function toggleAnswer(id) {
-        var answer = document.getElementById("answer" + id);
-        var allAnswers = document.querySelectorAll(".answer");
-
-        // Hide all answers
-        allAnswers.forEach(function (ans) {
-          ans.style.display = "none";
+      let li = document.querySelectorAll(".faq-text li");
+      for (var i = 0; i < li.length; i++) {
+        li[i].addEventListener("click", (e) => {
+          let clickedLi;
+          if (e.target.classList.contains("question-arrow")) {
+            clickedLi = e.target.parentElement;
+          } else {
+            clickedLi = e.target.parentElement.parentElement;
+          }
+          clickedLi.classList.toggle("showAnswer");
         });
-
-        // Show the clicked answer
-        answer.style.display =
-          answer.style.display === "none" ? "block" : "none";
       }
     </script>
   </body>
