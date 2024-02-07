@@ -1,0 +1,35 @@
+.tag{
+    color: #9AC760;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: -10px;
+}
+.bgw{
+    background-color: white;
+}
+
+.black{
+    color:black;
+}
+.start{
+    /* justify-content: start; */
+    text-align: start;
+}
+
+.px10{
+    padding:5% 10%;
+}
+
+.mt100{
+    margin-top: 100px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.pt20{
+    padding-top: 20px;
+}
+
+.px-5{
+    padding: 1% 5%;
+}

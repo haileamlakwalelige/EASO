@@ -491,6 +491,13 @@ body{
         display: grid;
         grid-template-columns: 1;
     }
+    
+.flax{
+    flex-direction: column;
+}
+.flaxr{
+  flex-direction: row-reverse;
+}
     .bot{
       margin-bottom: 40px;
     }
@@ -600,6 +607,12 @@ body{
         display: grid;
         grid-template-columns: 2;
     }
+    .flax{
+      flex-direction: column;
+  }
+  .flaxr{
+    flex-direction: row-reverse;
+}
     .grids{
       display: grid;
       justify-content: center;
@@ -653,6 +666,12 @@ body{
         justify-content: center;
         align-items: start;
     }
+    .flax{
+      flex-direction: column;
+  }
+  .flaxr{
+    flex-direction: row-reverse;
+}
     .grids{
       display: grid;
       justify-content: center;
@@ -686,5 +705,11 @@ body{
         display: grid;
         grid-template-columns: 4;
     } */
+    .flax{
+      display: flex;
+  }
+  .flaxr{
+      flex-direction: row-reverse;
+  }
   }
   
