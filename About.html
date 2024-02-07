@@ -24,6 +24,7 @@
       .container {
         position: relative;
         width: 100%;
+        height: 100%;
         min-height: 450px;
         background-color: #f5f5f5;
       }
@@ -33,6 +34,9 @@
         margin: 30px auto;
         text-align: center;
       }
+     .test{
+        margin-bottom: 50px;
+     }
       .contents-wraper .header h1 {
         position: relative;
         font-size: 40px;
@@ -55,6 +59,7 @@
       .contents-wraper .testRow {
         width: 100%;
         min-height: inherit;
+        /* height: 600px; */
         position: relative;
         overflow: hidden;
       }
@@ -64,6 +69,7 @@
       .testRow .testItem {
         width: 100%;
         height: 100%;
+        min-height: 100%;
         position: absolute;
         display: flex;
         justify-content: center;
@@ -150,6 +156,9 @@
           left: 0%;
         }
       }
+      .gri{
+        color:#9AC760;
+      }
 
       @media (max-width: 550px) {
         .container .contents-wraper {
@@ -166,6 +175,17 @@
           letter-spacing: initial;
           line-height: initial;
         }
+        .my10{
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        .contents-wraper .testRow {
+        width: 100%;
+        min-height: inherit;
+        height: 600px;
+        position: relative;
+        overflow: hidden;
+      }
       }
     </style>
   </head>
@@ -230,9 +250,9 @@
     <!-- Testimonials -->
     <div class="container">
       <div class="contents-wraper">
-        <!-- <section class="header"><h1>Testimonial</h1></section> -->
+        <!-- <section class="header test"><h1>Testimonial</h1></section> -->
         <!-- <section class="header"><h1 class="our in phi start">Meet our board members</h1></section> -->
-        <h1 class="our in phi start">Meet our board members</h1>
+        <h1 class="in gri test my10">Meet our board members</h1>
 
         <section class="testRow">
           <div class="testItem">
