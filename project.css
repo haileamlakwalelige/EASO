@@ -1,9 +1,34 @@
+/* Default styles for all screen sizes */
 .tag {
   color: #9ac760;
   font-weight: bold;
   font-size: 30px;
   margin-bottom: -10px;
 }
+
+/* Styles for very small screens */
+@media only screen and (max-width: 480px) {
+  .tag {
+    font-size: 20px; /* Adjust font size for very small screens */
+    margin-bottom: -5px; /* Adjust margin for very small screens */
+  }
+}
+
+/* Styles for small screens */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .tag {
+    font-size: 25px; /* Adjust font size for small screens */
+    margin-bottom: -8px; /* Adjust margin for small screens */
+  }
+}
+
+/* Styles for medium screens */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .tag {
+    /* You can keep the default styles for medium screens */
+  }
+}
+
 .bgw {
   background-color: white;
 }
